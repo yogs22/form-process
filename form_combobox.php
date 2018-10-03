@@ -10,14 +10,14 @@
     <?php
     //koneksi ke database
     $con = mysqli_connect("localhost","sapa","melbu","trik");
-    $query = "SELECT * FROM `countries`";
+    $query = "SELECT * FROM countries";
     $sql = mysqli_query($con, $query);
     ?>
     <form action="" method="POST">
         <select name="negara">
             <?php
             while ($data = mysqli_fetch_array($sql)) {
-                ?><option value="<?php echo $data['id'];?>"><?php echo $data['negara'];?></option><?php
+                echo '<option value="$data[id]">'.$data['negara'].'</option>';
             }
             ?>
         </select>
