@@ -17,7 +17,7 @@
         <select name="negara">
             <?php
             while ($data = mysqli_fetch_array($sql)) {
-                echo '<option value="$data[id]">'.$data['negara'].'</option>';
+                echo '<option value="'.$data[id].'">'.$data['negara'].'</option>';
             }
             ?>
         </select>
